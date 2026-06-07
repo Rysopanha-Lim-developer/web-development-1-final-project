@@ -1,0 +1,47 @@
+@import url("pageReset.css");
+header{
+    display: flex;
+    align-items: center;
+    padding: 15px 50px;
+    gap: 30%;
+    background-color: #f9e8de;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+nav ul li a{
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    color: #39483a;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+}
+nav ul li a:hover{
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+#login{
+    border: 2px solid #39483a;
+    border-radius: 8px;
+    padding: 3px 4px;
+}
+#shop-logo{
+    background-image: url("./web-image/tnaot_cafe_logo-Photoroom.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+}
+
+
+footer{
+    background-color: #f9e8de;
+    display: flex;
+    align-items: center;
+}
