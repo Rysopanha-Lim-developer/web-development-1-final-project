@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/553294db54.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="home_seth_ren.css">
     <title>Tnaot-Café</title>
@@ -13,37 +16,47 @@
         <nav>
             <ul>
                 <li class="navigation-link" id="home">
-                    <a href="home_seth_ren.html">
+                    <a href="home_seth_ren.html" target="_self">
                         <i class="fa-solid fa-house"></i>
                         Home
                     </a>
                 </li>
                 <li class="navigation-link" id="menu">
-                    <a href="menu_net.html">
+                    <a href="menu_net.html" target="_blank">
                         <i class="fa-solid fa-bars"></i>
                         Menu
                     </a>
                 </li>
                 <li class="navigation-link" id="about-us">
-                    <a href="aboutUs_kimhak.html">
+                    <a href="aboutUs_kimhak.html" target="_blank">
                         <i class="fa-solid fa-circle-info"></i>
                         About
                     </a>
                 </li>
-                <li class="navigation-link" id="hot-deal">
-                    <a href="hotDeal_nha.html">
-                        <i class="fa-solid fa-dollar-sign"></i>
-                        Hot Deal
-                    </a>
-                </li>
+                
                 <li class="navigation-link" id="contact">
                     <a href="#contact">
                         <i class="fa-solid fa-circle-user"></i>
                         Contact
                     </a>
                 </li>
+                <li class="navigation-link" id="hot-deal">
+                    <div id="mini-list-toggle">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                            Hot Deal
+                        <i class="fa-solid fa-caret-down" id="toggler"></i>
+                    </div>
+                    <ul id="mini-list">
+                        <li id="promotion-link">
+                            <a href="promotion.html">Promotion</a>
+                        </li>
+                        <li id="minigame-link">
+                            <a href="minigame_nha.html">Mini Game</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="navigation-link" id="login">
-                    <a href="login_heng.html">
+                    <a href="login_heng.html" target="_self">
                         <i class="fa-solid fa-arrow-right-to-bracket"></i>
                         Login
                     </a>
@@ -63,5 +76,6 @@
             <small>&copy; 2026 Tnaot Cafe. All rights reserved.</small>
         </p>
     </footer>
+    <script type="module" src="interaction.js"></script>
 </body>
 </html>
