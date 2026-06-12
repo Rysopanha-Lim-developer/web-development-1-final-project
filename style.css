@@ -1,13 +1,32 @@
-@import url("pageReset.css");
+h1, h2{
+    font-family: Jost;
+}
+p{
+    font-family: Merriweather Sans;
+}
 header{
     position: sticky;
     z-index: 1000;
     top: 0;
     display: flex;
-    align-items: center;
-    padding: 5px 50px;
+    align-items: flex-start;
+    padding: 0px 50px;
     gap: 30%;
     background-color: #fdfbf7;
+}
+main{
+    background-color: rgba(50, 101, 134, 0.1);
+    display: flex;
+    align-items: center;;
+
+}
+footer{
+    background-color: #fdfbf7;
+    display: flex;
+    align-items: center;
+}
+footer p{
+    font-weight: normal;
 }
 nav ul{
     position: absolute;
@@ -16,11 +35,12 @@ nav ul{
     justify-content: center;
     list-style: none;
     gap: 20px;
+    margin-top: 40px;
 
 }
 nav ul li a{
-    font-family: Montserrat;
-    font-size: 1.1rem;
+    font-family: Jost;
+    font-size: 1rem;
     color: #39483a;
     text-decoration: none;
     text-align: center;
@@ -28,7 +48,7 @@ nav ul li a{
     font-weight: 600;
 }
 nav ul li a:hover{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-decoration: underline;
 }
 #hot-deal{
@@ -37,7 +57,7 @@ nav ul li a:hover{
     flex-direction: column;
 }
 #hot-deal #mini-list-toggle{
-    font-family: Montserrat;
+    font-family: Jost;
     font-size: 1.1rem;
     color: #39483a;
     text-decoration: none;
@@ -96,13 +116,8 @@ nav ul #hot-deal ul li{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
 }
 
 
-footer{
-    background-color: #fdfbf7;
-    display: flex;
-    align-items: center;
-}

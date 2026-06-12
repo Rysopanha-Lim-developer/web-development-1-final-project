@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/553294db54.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="minigame and promotion_nha.css">
     <title>Tnaot-Café/Mini game</title>
@@ -65,7 +65,50 @@
         </nav>
     </header>
     <main>
-        
+        <section class="game-section">
+            <h2>Guess the number between 1 and 10 to win BIG PRIZES!!!!</h2>
+            <div class="game-n-reward">
+                <div class="game-container">
+                    <p id="allowed-attempt">You have 3 chances</p>
+                    <input type="text" id="nums-input">
+                    <div class="btn-container">
+                        <button class="btn startNenter" id="nums-input-submit">Enter</button>
+                        <button class="btn resetNagain" id="nums-reset-submit">Reset</button>
+                    </div>
+                    <p class="result" id="guessing-result">Result</p>
+                </div>
+                <div class="reward">
+                    <ol type="1">
+                        <li class="reward">50% off coupon X1 (3 chances left)</li>
+                        <li class="reward">30% off coupon X1 (2 chances left)</li>
+                        <li class="reward">20% off coupon X1 (1 chances left)</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <section class="game-section">
+            <h2>Roll the dice to win the PRIZES!!!!</h2>
+            <div class="game-n-reward">
+                <div class="game-container">
+                    <div id="dice-container"></div>
+                    <div class="btn-container">
+                        <button class="btn startNenter" id="start-rolling">Start</button>
+                        <button class="btn resetNagain" id="again-rolling">Again</button>
+                    </div>
+                    <p class="result" id="dice-result">Result</p>
+                </div>
+                <div class="reward">
+                    <ol type="1">
+                        <li class="reward">15% off coupon X1</li>
+                        <li class="reward">10% off coupon X1</li>
+                        <li class="reward">5% off coupon X1</li>
+                        <li class="reward">Free Drink X1</li>
+                        <li class="reward">Free cracker X1</li>
+                        <li class="reward">Thank You</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <section id="contact">
