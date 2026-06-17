@@ -43,7 +43,7 @@ function RandomNums(userInput){
             allowedAttemp.textContent = `You have ${maxattempts} chances left`
             console.log("lose")
             if(maxattempts === 0){
-                guessingResult.textContent = `You Lost`
+                guessingResult.textContent = `You Lost it is ${randomNums}`
                 allowedAttemp.textContent = `You have ${maxattempts} chances left`
                 userSubmit.style.cursor = "not-allowed"
             }
