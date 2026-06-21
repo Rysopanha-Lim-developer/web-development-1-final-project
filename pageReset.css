@@ -13,8 +13,19 @@ html, body{
     --body-background: #D4E9E2;
     --text-color-link:#FFFFFF;
     --text-color-body:#f0f0f0;
-    --title-font:Jost;
-    --body-font:  Merriweather Sans;
+    --title-nav-font:Jost;
+    --body-p-li-font:  Merriweather Sans;
+
+    /* Resoponsive font size 768px*/
+    --navigation-bar-link-font: clamp(2dvw, 1.1rem,5dvw);
+    --body-font-size:clamp(2dvw, 1rem, 3.5dvw);
+    --h2-font-size:clamp(3dvw, 1.1rem, 4dvw);
+
+    /* Responsive font size 600px */
+    --navigation-bar-link-font-600: clamp(2dvw, 1rem,5dvw);
+    --body-font-size-600:clamp(3dvw, 1rem, 3.5dvw);
+    --body-li-font-size-600:clamp(2.5dvw, 0.9rem, 3dvw);
+    
 }
 h1, h2{
     font-family: Jost;

@@ -11,7 +11,7 @@ main{
 .game-section{
     position: relative;
     width: 35vw;
-    height: clamp(300px, 350px, 600px);
+    height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,7 +55,7 @@ main{
     padding: 30px 0;
 }
 .reward ol li{
-    font-family: var(--body-font);
+    font-family: var(--body-p-li-font);
     color: var(--text-color-body);
     font-weight: normal;
     padding-bottom: 10px;
@@ -115,4 +115,139 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+@media (min-width:600px) and (max-width:768px) {
+    main{
+        grid-template-columns:repeat(1, 1fr);
+        grid-auto-rows: minmax(100px, 400px);
+    }
+    .game-section{
+        width: clamp(70dvw, 300px, 80dvw);
+        height: clamp(70dvh, 350px, 90dvh);
+    }
+    .game-section h2{
+        font-size: var(--h2-font-size);
+    }
+    .game-n-reward{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+    }
+    .game-container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: center;
+        padding: 30px 0;
+    }
+    .game-container .result{
+        position: relative;
+        margin-top: 10px;
+    }
+    #allowed-attempt{
+        font-size: var(--body-font-size);
+    }
+    .reward{
+        margin-left: 10px;
+        font-size: var(--body-font-size);
+    }
+    .reward ol li{
+        font-family: var(--body-p-li-font);
+        color: var(--text-color-body);
+    }
+    .btn-container{
+        gap: 30px;
+    }
+    .btn{
+        padding: 4px 5px;
+        font-size: var(--body-font-size);
+    }
+    #nums-input{
+        padding: 4px 5px;
+    }
+    #guessing-result{
+        font-size: clamp(2dvw, 0.9rem, 3.5dvw);
+    }
+
+    #dice-container{
+        width: clamp(10dvw, 100px, 20dvw);
+        height: clamp(10dvw, 100px, 20dvw);
+    }
+}
+
+@media (max-width:600px) {
+    main{
+        display: grid;
+        align-items: flex-start;
+        justify-content: center;
+        grid-template-columns:repeat(1, 1fr);
+        grid-auto-rows: clamp(80dvh, 110dvw, 100dvh);
+        padding: 50px 0;
+        row-gap: 30px;
+    }
+    .game-section{
+        width: clamp(70dvw, 300px, 80dvw);
+        height: clamp(80dvh, 110dvw, 100dvh);
+    }
+    .game-section h2{
+        font-size: var(--h2-font-size);
+    }
+    .game-n-reward{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 0px;
+    }
+    .game-container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .game-container .result{
+        position: relative;
+        margin-top: 5px;
+    }
+    #allowed-attempt{
+        font-size: var(--body-font-size);
+    }
+    .reward{
+        margin-left: 0px;
+        font-size: var(--body-font-size);
+    }
+    .reward ol{
+        padding: 5px 0;
+    }
+    .reward ol li{
+        font-family: var(--body-p-li-font);
+        font-size: var(--body-li-font-size-600);
+        color: var(--text-color-body);
+        padding-bottom: 5px;
+    }
+    .btn-container{
+        gap: 20px;
+    }
+    .btn{
+        padding: 4px 5px;
+        font-size: var(--body-font-size);
+    }
+    #nums-input{
+        width: 60%;
+        padding: 4px 5px;
+    }
+    #guessing-result{
+        font-size: clamp(2dvw, 0.9rem, 3.5dvw);
+    }
+
+    #dice-container{
+        width: clamp(10dvw, 100px, 20dvw);
+        height: clamp(10dvw, 100px, 20dvw);
+    }
 }
