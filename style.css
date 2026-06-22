@@ -71,14 +71,14 @@ footer p{
     transition: 0.4s ease-in-out;
     font-weight: 600;
 }
-@media (hover: hover) {
-    nav ul li a:hover{
+
+#nav-bar li a:hover{
         font-size: 1.1rem;
         text-decoration: underline;
     }
-    #hot-deal #mini-list-toggle:hover{
-        font-size: 1.2rem;
-    }
+
+#hot-deal #mini-list-toggle:hover{
+    font-size: 1.2rem;
 }
 
 #hot-deal{
@@ -107,16 +107,16 @@ footer p{
 #toggler.spin{
     transform: rotate(180deg);
 }
-nav ul #hot-deal #mini-list{
+#nav-bar #hot-deal #mini-list{
     position: absolute;
     display: none;
-    margin-top: 30px;
+    margin-top: 27px;
     width: 100%;
     max-height: 0;
     animation: shownList 0.5s ease-in-out;
     list-style: none;
 }
-nav ul #hot-deal #mini-list.shown{
+#nav-bar #hot-deal #mini-list.shown{
     display: list-item;
 }
 @keyframes shownList {
@@ -128,12 +128,12 @@ nav ul #hot-deal #mini-list.shown{
         opacity: 1;
     }
 }
-nav ul #hot-deal ul li{
+#nav-bar #hot-deal ul li{
     text-align: center;
     padding: 3px 4px;
     border: 1px solid var(--text-color-body);
     border-radius: 8px;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
     min-width: 100px;
 }
 #login{
