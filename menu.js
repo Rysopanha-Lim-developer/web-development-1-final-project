@@ -1,16 +1,22 @@
 function showCategory(category, button) {
-  const cafeCards = document.querySelectorAll(".cafe");
-  const dessertCards = document.querySelectorAll(".dessert");
+  const cafeSection = document.querySelector(".cafe-section");
+  const dessertSection = document.querySelector(".dessert-section");
+
+  [cafeSection, dessertSection].forEach((section) => {
+    if (section) {
+      section.classList.remove("primary", "secondary");
+    }
+  });
 
   if (category === "cafe") {
-    cafeCards.forEach((card) => (card.style.display = "block"));
-    dessertCards.forEach((card) => (card.style.display = "none"));
+    cafeSection?.classList.add("primary");
+    dessertSection?.classList.add("secondary");
   } else if (category === "desserts") {
-    cafeCards.forEach((card) => (card.style.display = "none"));
-    dessertCards.forEach((card) => (card.style.display = "block"));
+    dessertSection?.classList.add("primary");
+    cafeSection?.classList.add("secondary");
   } else if (category === "all") {
-    cafeCards.forEach((card) => (card.style.display = "block"));
-    dessertCards.forEach((card) => (card.style.display = "block"));
+    cafeSection?.classList.add("primary");
+    dessertSection?.classList.add("secondary");
   }
 
   document.querySelectorAll(".tab-btn").forEach((btn) => {
