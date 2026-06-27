@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/web-image/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/web-image/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/web-image/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/web-image/favicon_io/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -11,10 +15,10 @@
     <title>Tnaot-Café/Promotion</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div id="shop-logo"></div>
         <nav>
-            <ul>
+            <ul id="nav-bar">
                 <li class="navigation-link" id="home">
                     <a href="home_seth_ren.html" target="_self">
                         <i class="fa-solid fa-house"></i>
@@ -23,7 +27,7 @@
                 </li>
                 <li class="navigation-link" id="menu">
                     <a href="menu_net.html" target="_blank">
-                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-book-open"></i>
                         Menu
                     </a>
                 </li>
@@ -41,11 +45,11 @@
                     </a>
                 </li>
                 <li class="navigation-link" id="hot-deal">
-                    <div id="mini-list-toggle">
+                    <a id="mini-list-toggle">
                         <i class="fa-solid fa-dollar-sign"></i>
                             Hot Deal
                         <i class="fa-solid fa-caret-down" id="toggler"></i>
-                    </div>
+                    </a>
                     <ul id="mini-list">
                         <li id="promotion-link">
                             <a href="promotion.html">Promotion</a>
@@ -63,13 +67,114 @@
                 </li>
             </ul>
         </nav>
+        <i class="fa-solid fa-bars" id="nav-dropper"></i>
+        <i class="fa-solid fa-xmark" id="nav-retract"></i>
     </header>
-    <main>
-
+    <main class="promotion-main">
+        <section class="promotion-section">
+            <article class="promotion-card" id="limited-promotion">
+                <p class="promotion-title">Offer of the Month</p>
+                <div class="offer-container">
+                    <div class="offer-pic-container">
+                        <img src="/web-image/promotion_1.jpg" alt="promotion_1">
+                    </div>
+                    <div class="offer-description">
+                        <div class="description-container">
+                            <p class="description offer-title">
+                                The monthly special.
+                            </p>
+                            <ul class="description limited-offer">
+                                <li>For 2.5$ you will get </li>
+                                <li><i class="fa-solid fa-arrow-right"></i>1 hot cappuccino(2$)</li>
+                                <li><i class="fa-solid fa-arrow-right"></i>1 croissant(1.25$)</li>
+                            </ul>
+                        </div>
+                        <div class="countdount-container">
+                            <p class="description">offer valid until 20/July/22026</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="promotion-card permanent-promotion">
+                <p class="promotion-title">Drinks deals</p>
+                <div class="offer-container">
+                    <div class="offer-pic-container">
+                        <img src="/web-image/promotion_2.jpg" alt="promotion_2">
+                    </div>
+                    <div class="offer-description">
+                        <div class="description-container">
+                            <p class="description  offer-title">
+                                The 3 Iced 1 Hot.
+                            </p>
+                            <p class="description">
+                                Order 3 Iced drink of any size get 1 hot drink for FREE
+                            </p>
+                        </div>
+                        <div class="countdount-container">
+                            <p class="description">offer valid for your first 3 orders</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="promotion-card permanent-promotion">
+                <p class="promotion-title">Pastry deals</p>
+                <div class="offer-container">
+                    <div class="offer-pic-container">
+                        <img src="/web-image/promotion_3_v2.jpg" alt="promotion_2">
+                    </div>
+                    <div class="offer-description">
+                        <div class="description-container">
+                            <p class="description offer-title">
+                                Buy 2 for 1 Pastry.
+                            </p>
+                            <p class="description">
+                                Order 2 slices of any cake get 1 croissant for FREE
+                            </p>
+                        </div>
+                        <div class="countdount-container">
+                            <p class="description">offer valid for your first 5 orders</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
     </main>
     <footer>
+        <h2>Contact</h2>
         <section id="contact">
-            
+            <div id="cotact-container">
+                <div class="info-container">
+                    <ul>
+                        <li class="contact-info">
+                            <i class="fa-solid fa-phone"></i>
+                            097 205 502
+                        </li>
+                        <li class="contact-info">
+                            <i class="fa-brands fa-telegram"></i>
+                            097 205 502
+                        </li>
+                        <li class="contact-info">
+                            <i class="fa-solid fa-envelope"></i>
+                            TnaotCafé@gmail.come
+                        </li>
+                    </ul>
+                </div>
+                <div class="info-container">
+                    <ul>
+                        <li class="media-info">
+                            <i class="fa-brands fa-facebook"></i>
+                            TnaotCafé Cambodia
+                        </li>
+                        <li class="media-info">
+                            <i class="fa-brands fa-square-instagram"></i>
+                            @TnaotCafé_Cambodia
+                        </li>
+                        <li class="media-info">
+                            <i class="fa-brands fa-tiktok"></i>
+                            @TnaotCafé_Cambodia
+                        </li>
+                    </ul>
+                </div>
         </section>
         <p>
             <small>&copy; 2026 Tnaot Cafe. All rights reserved.</small>

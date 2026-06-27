@@ -8,7 +8,6 @@ body{
 
 main{
   display: block;
-  background-color: #f5f3f0;
 }
 
 .section-eyebrow {
@@ -86,7 +85,6 @@ main{
 .story {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: #f5f3f0;
 }
 
 .story_img {
@@ -120,7 +118,6 @@ main{
 
 .map {
   display: grid;
-  background-color: #f5f3f0;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -161,7 +158,6 @@ main{
 
 .values {
   padding: 100px 72px;
-  background: #f5f3f0;
 }
 
 .values-header {
@@ -214,4 +210,40 @@ main{
   font-size: 0.9rem;
   line-height: 1.75;
   color: #666;
+}
+
+@media (max-width: 900px) {
+  .about_us_text,
+  .story_text,
+  .map_text,
+  .values {
+    padding: 48px 24px;
+  }
+
+  .story,
+  .map {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+
+
+  .map_img {
+    order: 0;
+  }
+
+  .story_img,
+  .map_img {
+    height: 400px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    padding: 48px 24px 24px;
+  }
 }

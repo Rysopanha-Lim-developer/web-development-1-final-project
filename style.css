@@ -1,10 +1,5 @@
-h1, h2{
-    font-family: Jost;
-}
-p{
-    font-family: Merriweather Sans;
-}
-header{
+@import url('pageReset.css');
+#header{
     position: sticky;
     z-index: 1000;
     top: 0;
@@ -12,23 +7,52 @@ header{
     align-items: flex-start;
     padding: 0px 50px;
     gap: 30%;
-    background-color: #fdfbf7;
+    background-color: var(--header-footer-background);
+    height: 135px;
+}
+.fa-bars, .fa-xmark{
+    margin-right: 10px;
+    padding: 10px;
+    display: none;
+    color:  var(--text-color-link);
 }
 main{
-    background-color: rgba(50, 101, 134, 0.1);
+    background-color: var(--body-background);
     display: flex;
-    align-items: center;;
+    align-items: center;
 
 }
 footer{
-    background-color: #fdfbf7;
+    background-color: var(--header-footer-background);
+    color: var(--text-color-link);
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    row-gap: 20px;
 }
 footer p{
     font-weight: normal;
+
 }
-nav ul{
+#cotact-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 50px;
+}
+.info-container ul{
+    list-style: none;
+}
+.info-container ul li{
+    padding-bottom: 10px;
+    font-family: var(--body-p-li-font);
+}
+
+#nav-bar{
     position: absolute;
     display: flex;
     align-items: baseline;
@@ -38,36 +62,39 @@ nav ul{
     margin-top: 40px;
 
 }
-nav ul li a{
-    font-family: Jost;
+#nav-bar li a{
+    font-family: var(--title-nav-font);
     font-size: 1rem;
-    color: #39483a;
+    color:  var(--text-color-link);
     text-decoration: none;
     text-align: center;
     transition: 0.4s ease-in-out;
     font-weight: 600;
 }
-nav ul li a:hover{
-    font-size: 1.1rem;
-    text-decoration: underline;
+
+#nav-bar li a:hover{
+        font-size: 1.1rem;
+        text-decoration: underline;
+    }
+
+#hot-deal #mini-list-toggle:hover{
+    font-size: 1.2rem;
 }
+
 #hot-deal{
     position: relative;
     display: flex;
     flex-direction: column;
 }
 #hot-deal #mini-list-toggle{
-    font-family: Jost;
+    font-family: var(--title-nav-font);
     font-size: 1.1rem;
-    color: #39483a;
+    color: var(--text-color-link);
     text-decoration: none;
     text-align: center;
     transition: 0.4s ease-in-out;
     font-weight: 600;
     cursor: pointer;
-}
-#hot-deal #mini-list-toggle:hover{
-    font-size: 1.2rem;
 }
 #toggler{
     background-color: transparent;
@@ -80,14 +107,16 @@ nav ul li a:hover{
 #toggler.spin{
     transform: rotate(180deg);
 }
-nav ul #hot-deal #mini-list{
+#nav-bar #hot-deal #mini-list{
+    position: absolute;
     display: none;
-    margin-top: 25px;
+    margin-top: 27px;
     width: 100%;
     max-height: 0;
-    animation: shownList 0.5s ease-in-out  ;
+    animation: shownList 0.5s ease-in-out;
+    list-style: none;
 }
-nav ul #hot-deal #mini-list.shown{
+#nav-bar #hot-deal #mini-list.shown{
     display: list-item;
 }
 @keyframes shownList {
@@ -99,12 +128,13 @@ nav ul #hot-deal #mini-list.shown{
         opacity: 1;
     }
 }
-nav ul #hot-deal ul li{
+#nav-bar #hot-deal ul li{
     text-align: center;
-    padding: 1px 0;
-    border: 1px solid #39483a;
+    padding: 3px 4px;
+    border: 1px solid var(--text-color-body);
     border-radius: 8px;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
+    min-width: 100px;
 }
 #login{
     border: 2px solid #39483a;
@@ -118,6 +148,317 @@ nav ul #hot-deal ul li{
     background-size: cover;
     width: 110px;
     height: 110px;
+    filter: brightness(20);
 }
 
+@media (min-width:600px) and (max-width:768px) {
 
+    
+    #header{
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px;
+        gap: 0;
+        height: 120px;
+        width: 100dvw;
+        z-index: 0;
+    }
+    #header.dropdown{
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px;
+        gap: 0;
+        height: 120px;
+        width: 100dvw;
+        z-index: 1000;
+    }
+    nav{
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+    }
+
+    #nav-bar{
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 20px 30px;
+        margin-top: 0px;
+        border-top: 1px solid var(--text-color-link);
+        background-color: var(--header-footer-background);
+        visibility: hidden;
+        opacity: 0;
+        animation: dropDown 0.5s linear both;
+
+        .navigation-link{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    
+    #nav-bar.show{
+        visibility: visible;
+        opacity: 1;
+        animation: dropDown 0.4s both;
+        .navigation-link{
+            opacity: 1;
+            visibility: visible;
+            animation: dropDown 0.4s both;
+        }
+    }
+
+    @keyframes dropDown {
+        0%{
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    #nav-bar li a{
+        font-family: var(--title-nav-font);
+        font-size: var(--navigation-bar-link-font);
+        color:  var(--text-color-link);
+    }
+    .fa-bars{
+        display: block;
+    } 
+    .fa-bars.close{
+        display: none;
+    }
+    .fa-xmark{
+        display: none;
+    }
+    .fa-xmark.open{
+        display: block;
+    }
+    #hot-deal{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    #hot-deal #mini-list-toggle{
+        font-family: var(--title-nav-font);
+        font-size: var(--navigation-bar-link-font);
+        color: var(--text-color-link);
+        text-decoration: none;
+        text-align: center;
+        transition: 0.4s ease-in-out;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    #toggler{
+        font-size: var(--navigation-bar-link-font);
+        transition: 0.4s ease-in-out;
+        padding: 2px;
+        transform: rotate(90deg);
+    }
+    #toggler.spin{
+        transform: rotate(270deg);
+    }
+    nav ul #hot-deal #mini-list{
+        margin-top: -4dvh;
+        margin-left: clamp(20dvw, 50px, 90px);
+        width: 20%;
+    }
+    @keyframes shownList {
+        from{
+            opacity: 0;
+            max-height: 0;
+            transform: translateX(20px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    nav ul #hot-deal ul li{
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 2px;
+    }
+
+    footer{
+        padding: 10px 5px;
+        width: 100%;
+        row-gap: 30px;
+    }
+    footer p{
+        font-size: var(--body-p-li-font)
+    }
+    #cotact-container{
+        gap: clamp(40px, 20dvw, 30dvw);
+    }
+    .info-container ul li{
+        font-family: var(--body-p-li-font);
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width:600px) {
+
+    
+    #header{
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px;
+        gap: 0;
+        height: 120px;
+        width: 100dvw;
+        z-index: 0;
+    }
+    #header.dropdown{
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px;
+        gap: 0;
+        height: 120px;
+        width: 100dvw;
+        z-index: 1000;
+    }
+    nav{
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+    }
+
+    #nav-bar{
+        height: 100dvh;
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        padding:30px;
+        margin-top: 0px;
+        border-top: 1px solid var(--text-color-link);
+        background-color: var(--header-footer-background);
+        visibility: hidden;
+        opacity: 0;
+        animation: dropDown 0.5s linear both;
+
+        .navigation-link{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    
+    #nav-bar.show{
+        visibility: visible;
+        opacity: 1;
+        animation: dropDown 0.4s both;
+        .navigation-link{
+            opacity: 1;
+            visibility: visible;
+            animation: dropDown 0.4s both;
+        }
+    }
+
+    @keyframes dropDown {
+        0%{
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    #nav-bar li a{
+        font-family: var(--title-nav-font);
+        font-size: var(--navigation-bar-link-font);
+        color:  var(--text-color-link);
+    }
+    .fa-bars{
+        display: block;
+    } 
+    .fa-bars.close{
+        display: none;
+    }
+    .fa-xmark{
+        display: none;
+    }
+    .fa-xmark.open{
+        display: block;
+    }
+    #hot-deal{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    #hot-deal #mini-list-toggle{
+        font-family: var(--title-nav-font);
+        font-size: var(--navigation-bar-link-font);
+        color: var(--text-color-link);
+        text-decoration: none;
+        text-align: center;
+        transition: 0.4s ease-in-out;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    #toggler{
+        font-size: var(--navigation-bar-link-font);
+        transition: 0.4s ease-in-out;
+        padding: 2px;
+        transform: rotate(90deg);
+    }
+    #toggler.spin{
+        transform: rotate(270deg);
+    }
+    nav ul #hot-deal #mini-list{
+        margin-top: -4dvh;
+        margin-left: clamp(40dvw, 50px, 90px);
+        width: 20%;
+    }
+    @keyframes shownList {
+        from{
+            opacity: 0;
+            max-height: 0;
+            transform: translateX(20px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    nav ul #hot-deal ul li{
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 2px;
+    }
+
+    footer{
+        padding: 10px 5px;
+        width: 100%;
+        row-gap: 30px;
+    }
+    footer p{
+        font-size: var(--body-font-size-600)
+    }
+    #cotact-container{
+        gap: clamp(5dvw, 10px, 15dvw);
+    }
+    .info-container ul li{
+        font-family: var(--body-p-li-font);
+        font-size: var(--body-font-size-600);
+        padding-bottom: 10px;
+    }
+}
