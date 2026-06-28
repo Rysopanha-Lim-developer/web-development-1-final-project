@@ -57,7 +57,7 @@ h1 {
   transform: translateY(-1px);
 }
 
-.menu-grid {
+.menu {
   display: flex;
   flex-direction: column;
   gap: 25px;
