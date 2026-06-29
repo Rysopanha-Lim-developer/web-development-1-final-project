@@ -1,73 +1,135 @@
 @import url("pageReset.css");
-body{
-    background-color: #f9e8de;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-#shop-logo-login{
-    background-image: url("./web-image/tnaot_cafe_logo-Photoroom.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 200px;
-    height: 200px;
-}
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-main p{
-    font-family: sans-serif;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-form{
-    border: 2px solid #39483a;
-    border-radius: 8px;
-    padding: 10px 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    row-gap: 10px;
-    background-color: rgb(248, 224, 224);
-    backdrop-filter: blur(12px);
-}
-.login-input{
-    display: flex;
-    flex-direction: column;
-    row-gap: 5px;
-}
-form label{
-    font-family: sans-serif;
-    font-size: 1rem;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-form input{
-    font-family: sans-serif;
-    font-size: 1rem;
-    outline: none;
-    padding: 4px 3px;
-    border: 1px solid #39483a;
-    border-radius: 8px;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    margin: 0;
+    background-color: #D4E9E2;
 }
-form button{
-    margin-left: 60px;
-    font-family: sans-serif;
-    font-size: 1rem;
-    padding: 3px 5px;
-    outline: none;
-    border: none;
+
+
+.modal-card {
+    position: relative;
+    border: 2px solid black;
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #FDFBF7;
+    border-radius: 20px;
+}
+
+/* colse button */
+.close-btn {
+    position: absolute;
+    top: 10px; 
+    left: 30px;
+    width: 20px;
+    height: 20px;
+}
+
+header {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #3E2723;
+}
+
+.input-group label {
+    font-family: var(--title-font, "Merriweather Sans"), sans-serif;
+}
+
+.input-group input, .input-group select {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #333; /* Gives that sketched underline look */
+  padding: 8px 0;
+  background: transparent;
+  outline: none;
+  margin-bottom: 8px;
+}
+
+.split-row {
+    display: flex;
+    gap: 30px;
+
+    @media screen and (max-width: 600px) {
+        gap: 0px;
+    }
+}
+
+.split-row, .input-group {
+    flex: 1;
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+}
+
+.confirm-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    background-color: #3c7413;
+    color: #F9F8F3;
+    font-weight:bolder;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 10px 14px;
     border-radius: 6px;
-    background-color: #8e8e8e;
-    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        background-color: #4c8127;
+    }
 }
-form button:hover{
-    background-color: rgba(142, 142, 142, 0.5);
+
+.footer {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px dashed #999;
 }
-form button:active{
-    background-color: rgba(142, 142, 142, 0.7);
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px 20px; 
+    text-align: center;
+    padding: 10px;
+
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-item {
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: #013E37;
+    }
+}
+
+.fa-solid {
+    transition: color 0.2s ease;
+}
+
+.footer-item:hover {
+    color: darkgreen;
 }

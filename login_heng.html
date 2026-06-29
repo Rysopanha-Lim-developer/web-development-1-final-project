@@ -15,64 +15,72 @@
     <title>Tnaot-Café/Login</title>
 </head>
 <body>
+    <div class="modal-card">
+    <!-- Close button stays at top-left/right natively depending on style -->
+    <button class="close-btn"><a href="home_seth_ren.html" target="_self">&times;</a></button>
     <header>
-        <div id="shop-logo-login"></div>
+      <h2>Tnaot Café</h2>
+      <p>Book a Table!</p>
     </header>
-    <main>
-        <p>Start your journey to day</p>
-        <form action="home_seth_ren.html">
-            <div class="login-input">
-                <label for="userName">Username:</label>
-                <input type="text" id="userName" placeholder="Tnaot-café 168" required>
-            </div>
-            <div class="login-input">
-                <label for="emaol">Email:</label>
-                <input type="email" id="email" placeholder="coffee@gamil.com" required>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-    </main>
-    <footer>
-        <h2>Contact</h2>
-        <section id="contact">
-            <div id="cotact-container">
-                <div class="info-container">
-                    <ul>
-                        <li class="contact-info">
-                            <i class="fa-solid fa-phone"></i>
-                            097 205 502
-                        </li>
-                        <li class="contact-info">
-                            <i class="fa-brands fa-telegram"></i>
-                            097 205 502
-                        </li>
-                        <li class="contact-info">
-                            <i class="fa-solid fa-envelope"></i>
-                            TnaotCafé@gmail.come
-                        </li>
-                    </ul>
-                </div>
-                <div class="info-container">
-                    <ul>
-                        <li class="media-info">
-                            <i class="fa-brands fa-facebook"></i>
-                            TnaotCafé Cambodia
-                        </li>
-                        <li class="media-info">
-                            <i class="fa-brands fa-square-instagram"></i>
-                            @TnaotCafé_Cambodia
-                        </li>
-                        <li class="media-info">
-                            <i class="fa-brands fa-tiktok"></i>
-                            @TnaotCafé_Cambodia
-                        </li>
-                    </ul>
-                </div>
-        </section>
-        <p>
-            <small>&copy; 2026 Tnaot Cafe. All rights reserved.</small>
-        </p>
+    <form class="reservation-form">
+      <!-- Row 1: Name and Phone -->
+      <div class="form-row split-row">
+        <div class="input-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="input-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        </div>
+      </div>
+
+      <!-- Row 2: Full-width Email -->
+      <div class="form-row full-row">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="coffee@gmail.com" required>
+        </div>
+      </div>
+
+      <!-- Row 3: Guests and Date -->
+      <div class="form-row split-row">
+        <div class="input-group">
+          <label for="guests">Number of Guests</label>
+          <input type="number" name="guests" id="guests" placeholder="Expected guests">
+        </div>
+        <div class="input-group">
+          <label for="date">Select Date</label>
+          <input type="date" id="date" placeholder="DD/MM/Year" required>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="confirm-btn">[Confirm Booking]</button>
+    </form>
+
+    <!-- Dashed Separator & Grid Footer -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-item"> 
+            <i class="fa-solid fa-phone"></i>
+            <a href="#" class="contact-item">097 205 502</a>
+        </div>
+        <div class="footer-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="#" mailto="#" class="contact-item">TnaotCafé@gmail.com</a>
+        </div>
+        <div class="footer-item">
+            <i class="fa-brands fa-facebook"></i>
+            <a href="#" class="contact-item">@TnaotCafé_Cambodia</a>
+        </div>
+        <div class="footer-item">
+            <i class="fa-brands fa-tiktok"></i>
+            <a href="#" class="contact-item">@TnaotCafé_Cambodia</a>
+        </div>
+      </div>
     </footer>
-    <script type="module" src="interaction.js"></script>
+  </div>
+  <script type="module" src="interaction.js"></script>
 </body>
 </html>
