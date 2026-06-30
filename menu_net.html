@@ -74,13 +74,11 @@
     <main>
       <div class="container" id="menu-section">
         <div class="menu-buttons">
-          <button class="tab-btn active" onclick="showCategory('cafe', this)">
-            Cafe
-          </button>
+          <input type="radio" class="menu-tab-input" id="cafe-tab" name="menu-category" checked>
+          <label class="tab-btn" for="cafe-tab">Cafe</label>
 
-          <button class="tab-btn" onclick="showCategory('desserts', this)">
-            Desserts
-          </button>
+          <input type="radio" class="menu-tab-input" id="desserts-tab" name="menu-category">
+          <label class="tab-btn" for="desserts-tab">Desserts</label>
         </div>
 
         <div class="menu">

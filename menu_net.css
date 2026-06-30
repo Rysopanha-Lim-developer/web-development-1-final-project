@@ -29,6 +29,12 @@ h1 {
   z-index: 1;
 }
 
+.menu-tab-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .tab-btn {
   padding: 12px 30px;
   border: none;
@@ -51,7 +57,7 @@ h1 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.tab-btn.active {
+.menu-tab-input:checked + .tab-btn {
   background: #222;
   color: white;
   transform: translateY(-1px);
@@ -64,13 +70,18 @@ h1 {
 }
 
 .category-section {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   gap: 25px;
   justify-content: center;
   align-items: stretch;
   position: relative;
   padding-top: 8px;
+}
+
+#menu-section:has(#cafe-tab:checked) .cafe-section,
+#menu-section:has(#desserts-tab:checked) .dessert-section {
+  display: flex;
 }
 
 .category-heading {
