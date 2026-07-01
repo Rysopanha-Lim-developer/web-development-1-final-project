@@ -74,109 +74,113 @@
     <main>
       <div class="container" id="menu-section">
         <div class="menu-buttons">
-          <button class="tab-btn active" onclick="showCategory('cafe', this)">
-            Cafe
-          </button>
+          <input type="radio" class="menu-tab-input" id="cafe-tab" name="menu-category" checked>
+          <label class="tab-btn" for="cafe-tab">Cafe</label>
 
-          <button class="tab-btn" onclick="showCategory('desserts', this)">
-            Desserts
-          </button>
+          <input type="radio" class="menu-tab-input" id="desserts-tab" name="menu-category">
+          <label class="tab-btn" for="desserts-tab">Desserts</label>
         </div>
 
-        <div class="menu-grid">
-          <div class="card cafe">
-            <img src="./image_menu/straberrysoda.jpg" alt="strawberry-soda" />
-            <div class="content">
-              <h3>Strawberry Soda</h3>
-              <p>$2.99</p>
+        <div class="menu">
+          <div class="category-section cafe-section primary">
+            <h2 class="category-heading">Cafe</h2>
+            <div class="card cafe">
+              <img src="./web-image/photo_2026-06-27_10-55-58.jpg" alt="lychee-Coffee" />
+              <div class="content">
+                <h3>lychee Cofee</h3>
+                <p>$2.99</p>
+              </div>
+            </div>
+
+            <div class="card cafe">
+              <img src="./web-image/photo_2026-06-27_10-55-55.jpg" alt="Star-Coffee" />
+              <div class="content">
+                <h3>Star Coffee</h3>
+                <p>        $1.99</p>
+              </div>
+            </div>
+
+            <div class="card cafe">
+              <img src="./web-image/photo_2026-06-27_10-55-51.jpg" alt="Guava-Coffee" />
+              <div class="content">
+                <h3>Guava Coffee</h3>
+                <p>$2.99</p>
+              </div>
+            </div>
+
+            <div class="card cafe">
+              <img src="./web-image/photo_2026-06-30_10-26-39.jpg" alt="blueberry-soda" />
+              <div class="content">
+                <h3>Blueberry Soda</h3>
+                <p>$2.49</p>
+              </div>
+            </div>
+
+            <div class="card cafe">
+              <img src="./web-image/photo_2026-06-27_10-55-48.jpg" alt="Rambutan-Coffee" />
+              <div class="content">
+                <h3>Rambutan Coffee</h3>
+                <p>$2.49</p>
+              </div>
+            </div>
+
+            <div class="card cafe">
+              <img src="./web-image/ChatGPT Image Jun 27, 2026, 11_58_51 AM.png" alt="Thnoat-Coffee" />
+              <div class="content">
+                <h3>Thnoat Coffee</h3>
+                <p>$1.79</p>
+              </div>
+            </div>
+
+            <div class="card cafe">
+              <img src="./web-image/photo_2026-06-30_10-26-29.jpg" alt="strrawberry-soda" />
+              <div class="content">
+                <h3>Hot Espresso</h3>
+                <p>$1.29</p>
+              </div>
+            </div>
+
+            <div class="card cafe">
+              <img src="./web-image/ChatGPT Image Jun 27, 2026, 12_13_38 PM.png" alt="mango-sparkling" />
+              <div class="content">
+                <h3>Mango-Sparkling</h3>
+                <p>$1.49</p>
+              </div>
             </div>
           </div>
 
-          <div class="card cafe">
-            <img src="./image_menu/americano.jpg" alt="americano" />
-            <div class="content">
-              <h3>Ice americano</h3>
-              <p>$1.99</p>
+          <div class="category-section dessert-section secondary">
+            <h2 class="category-heading">Desserts</h2>
+            <div class="card dessert">
+              <img src="./image_menu/bread.jpg" alt="Bread" />
+              <div class="content">
+                <h3>Criossant</h3>
+                <p>$1.25</p>
+              </div>
             </div>
-          </div>
 
-          <div class="card cafe">
-            <img src="./image_menu/orangejuice.jpg" alt="orangejuice" />
-            <div class="content">
-              <h3>Orange Juice</h3>
-              <p>$2.99</p>
+            <div class="card dessert">
+              <img src="./image_menu/onsorm.jpg" alt="onsorm" />
+              <div class="content">
+                <h3>Onsorm</h3>
+                <p>$1.25</p>
+              </div>
             </div>
-          </div>
 
-          <div class="card cafe">
-            <img src="./image_menu/matchalatte.jpg" alt="matchalatte" />
-            <div class="content">
-              <h3>Ice Matcha Latte</h3>
-              <p>$2.49</p>
+            <div class="card dessert">
+              <img src="./image_menu/tnoat.jpg" alt="tnoat" />
+              <div class="content">
+                <h3>Nom Tnoat</h3>
+                <p>$1.49</p>
+              </div>
             </div>
-          </div>
 
-          <div class="card cafe">
-            <img src="./image_menu/latte.jpg" alt="Icelatte" />
-            <div class="content">
-              <h3>Ice Latte</h3>
-              <p>$2.49</p>
-            </div>
-          </div>
-
-          <div class="card cafe">
-            <img src="./image_menu/cappucino.jpg" alt="cappucino" />
-            <div class="content">
-              <h3>Hot Cappuccino</h3>
-              <p>$1.79</p>
-            </div>
-          </div>
-
-          <div class="card cafe">
-            <img src="./image_menu/espresso.jpg" alt="espresso" />
-            <div class="content">
-              <h3>Hot Espresso</h3>
-              <p>$1.29</p>
-            </div>
-          </div>
-
-          <div class="card cafe">
-            <img src="./image_menu/cappucino.jpg" alt="cappucino" />
-            <div class="content">
-              <h3>Cappucino</h3>
-              <p>$1.49</p>
-            </div>
-          </div>
-
-          <div class="card dessert">
-            <img src="./image_menu/bread.jpg" alt="Bread" />
-            <div class="content">
-              <h3>Criossant</h3>
-              <p>$1.25</p>
-            </div>
-          </div>
-
-          <div class="card dessert">
-            <img src="./image_menu/onsorm.jpg" alt="onsorm" />
-            <div class="content">
-              <h3>Onsorm</h3>
-              <p>$1.25</p>
-            </div>
-          </div>
-
-          <div class="card dessert">
-            <img src="./image_menu/tnoat.jpg" alt="tnoat" />
-            <div class="content">
-              <h3>Nom Tnoat</h3>
-              <p>$1.49</p>
-            </div>
-          </div>
-
-          <div class="card dessert">
-            <img src="./image_menu/chocolatecake.jpg" alt="Choco" />
-            <div class="content">
-              <h3>Chocolate Cake</h3>
-              <p>$1.49</p>
+            <div class="card dessert">
+              <img src="./image_menu/chocolatecake.jpg" alt="Choco" />
+              <div class="content">
+                <h3>Chocolate Cake</h3>
+                <p>$1.49</p>
+              </div>
             </div>
           </div>
         </div>
