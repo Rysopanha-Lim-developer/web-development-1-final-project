@@ -2,6 +2,18 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    const currentWindow = window.location.pathname
+
+    console.log(currentWindow)
+
+    if(currentWindow.includes("home_seth_ren.html")){
+        const displayData = JSON.parse(localStorage.getItem("User-Data"))
+
+        window.alert(`Greeting Mr/Mrs ${displayData.name}, Your table has been reserved.`)
+
+        localStorage.removeItem("User-Data")
+    }
+
     //list toggle
     const toggler = document.getElementById("toggler");
     const miniList = [...document.querySelectorAll("#mini-list")]
