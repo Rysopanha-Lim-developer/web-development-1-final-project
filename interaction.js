@@ -2,6 +2,27 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    const currentWindow = window.location.pathname
+
+    console.log(currentWindow)
+
+    try{
+        if(currentWindow.includes("home_seth_ren.html")){
+            const displayData = JSON.parse(sessionStorage.getItem("User-Data"))
+
+            window.alert(`Greeting Mr/Mrs ${displayData.name}, Your table has been reserved.`)
+
+            sessionStorage.removeItem("User-Data")
+        }
+        else if(!currentWindow.includes("home_seth_ren.html")){
+            throw new Error("There is no new reservation yet.");
+            
+        }
+    }
+    catch(error){
+        console.log(error)
+    }
+
     //list toggle
     const toggler = document.getElementById("toggler");
     const miniList = [...document.querySelectorAll("#mini-list")]
