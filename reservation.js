@@ -1,19 +1,18 @@
-const form = document.getElementById("reservation-submission")
+document.addEventListener("DOMContentLoaded", () =>{
+    const form = document.getElementById("reservation-submission")
 
 
-form.addEventListener("submit", event=>{
+    form.addEventListener("submit", event=>{
 
-    // 1. Stop the page from reloading
-    event.preventDefault();
 
-    // 2. Get the raw data
-    const formData = new FormData(form);
+        // 2. Get the form data
+        const formData = new FormData(form);
 
-    // 3. Convert to a plain object (This makes it JSON-friendly)
-    const dataObject = Object.fromEntries(formData.entries());
+        const dataObject = Object.fromEntries(formData.entries());
 
-    // 4. Save to localStorage
-    sessionStorage.removeItem("User-Data", JSON.stringify(dataObject));
+        // 4. Save to localStorage
+        localStorage.setItem("User-Data", JSON.stringify(dataObject));
 
-    console.log("Data saved to localStorage!");
+        console.log("Data saved to localStorage!");
+    })
 })
