@@ -6,12 +6,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log(currentWindow)
 
-    if(currentWindow.includes("home_seth_ren.html")){
-        const displayData = JSON.parse(localStorage.getItem("User-Data"))
+    try{
+        if(currentWindow.includes("home_seth_ren.html")){
+            const displayData = JSON.parse(sessionStorage.getItem("User-Data"))
 
-        window.alert(`Greeting Mr/Mrs ${displayData.name}, Your table has been reserved.`)
+            window.alert(`Greeting Mr/Mrs ${displayData.name}, Your table has been reserved.`)
 
-        localStorage.removeItem("User-Data")
+            sessionStorage.removeItem("User-Data")
+        }
+        else if(!currentWindow.includes("home_seth_ren.html")){
+            throw new Error("There is no new reservation yet.");
+            
+        }
+    }
+    catch(error){
+        console.log(error)
     }
 
     //list toggle

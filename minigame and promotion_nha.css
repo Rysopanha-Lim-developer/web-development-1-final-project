@@ -206,6 +206,15 @@
     font-size: var(--body-font-size);
 }
 
+#admin-main{
+    width: 100dvw;
+    height: 80dvh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
 @media (min-width:600px) and (max-width:768px) {
     .minigame-main{
         grid-template-columns:repeat(1, 1fr);
