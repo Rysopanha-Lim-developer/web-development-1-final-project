@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/web-image/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/web-image/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/web-image/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/web-image/favicon_io/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/553294db54.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="reservation_heng.css">
+    <title>Tnaot-Café/Login</title>
+</head>
+<body>
+    <div class="modal-overlay">
+    <div class="modal-card">
+    <!-- Close button stays at top-left/right natively depending on style -->
+    <button class="close-btn"><a href="home_seth_ren.html" target="_self">&times;</a></button>
+    <header>
+    <h2>Tnaot Café</h2>
+    <p>Book a Table!</p>
+    </header>
+    <form action="home_seth_ren.html" class="reservation-form" autocomplete="off" id="reservation-submission">
+    <!-- Row 1: Name and Phone -->
+    <div class="form-row split-row">
+        <div class="input-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="input-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" required>
+        </div>
+    </div>
+
+    <!-- Row 2: Full-width Email -->
+    <div class="form-row full-row">
+        <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="coffee@gmail.com" required>
+        </div>
+    </div>
+
+    <!-- Row 3: Guests and Date -->
+    <div class="form-row split-row">
+        <div class="input-group">
+        <label for="guests">Number of Guests</label>
+        <input type="number" name="guests" id="guests" min="1" max="5" placeholder="Minimum 1, Maximum 5">
+        </div>
+        <div class="input-group">
+        <label for="date">Select Date</label>
+        <input type="date" name="date" id="date" placeholder="DD/MM/Year" required>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="confirm-btn">[Confirm Booking]</button>
+    </form>
+
+    <!-- Dashed Separator & Grid Footer -->
+    <footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-item"> 
+            <i class="fa-solid fa-phone"></i>
+            <a href="#" class="contact-item">097 205 502</a>
+        </div>
+        <div class="footer-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="#" mailto="#" class="contact-item">TnaotCafé@gmail.com</a>
+        </div>
+        <div class="footer-item">
+            <i class="fa-brands fa-facebook"></i>
+            <a href="#" class="contact-item">@TnaotCafé_Cambodia</a>
+        </div>
+        <div class="footer-item">
+            <i class="fa-brands fa-tiktok"></i>
+            <a href="#" class="contact-item">@TnaotCafé_Cambodia</a>
+        </div>
+    </div>
+    </footer>
+</div>
+</div>
+</body>
+</html>
