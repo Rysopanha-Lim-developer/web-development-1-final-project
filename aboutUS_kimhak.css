@@ -213,29 +213,7 @@ main{
   transform: translateY(-5px);
 }
 
-@media (min-width:600px) and (max-width:768px) {
-  .values-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .map_img {
-    width: 400px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .map_text {
-  padding: 80px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-  .map_desc {
-    font-size: (2dvw, 1rem, 3.5dvw);
-  }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .about_us_text,
   .story_text,
   .map_text,
