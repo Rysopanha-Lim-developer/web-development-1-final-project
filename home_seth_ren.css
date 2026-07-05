@@ -177,6 +177,11 @@ main {
   .left-section,
   .right-section {
     width: 100%;
+
+    p{
+      width: 30ch;
+      text-align: start;
+    }
   }
 
   .right-section {
