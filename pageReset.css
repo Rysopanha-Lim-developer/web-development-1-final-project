@@ -28,14 +28,14 @@ html, body{
     --body-li-font-size-600:clamp(2.5dvw, 0.9rem, 3dvw);
     
 }
-h1, h2{
+h1, h2, h3, h4, h5,h6{
     font-family: Jost;
 }
 p{
     font-family: Merriweather Sans;
 }
 
-@media (max-width:768px) {
+@media (max-width:900px) {
     button{
         -webkit-tap-highlight-color:transparent;
     }

@@ -244,16 +244,16 @@
   width: 60%;
 }
 
-.left-section h1 {
+.left-section h3 {
   font-size: 2rem;
   margin-bottom: 10px;
   text-align: center;
+  color: #f5f5f5;
 }
 
 .left-section p {
   text-align: center;
   font-size: 19px;
-  justify-content: center;
   line-height: 1.7;
 }
 
@@ -344,6 +344,7 @@
   
 
   h3{
+    color: #f5f5f5;
     margin-bottom: 20px;
   }
   p{
@@ -693,42 +694,120 @@
     font-size: var(--body-font-size);
 }
 
+/*Admin page*/
 
-@media (max-width: 900px) {
-    .about_us_text,
-    .story_text,
-    .map_text,
-    .values {
-        padding: 48px 24px;
-    }
+#admin-main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
-    .story,
-    .map {
-        grid-template-columns: 1fr;
-        min-height: unset;
-    }
-
-
-    .map_img {
-        order: 0;
-    }
-
-    .story_img,
-    .map_img {
-        height: 400px;
-        padding-left: 24px;
-        padding-right: 24px;
-
-    }
-
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-
-    footer {
-        padding: 48px 24px 24px;
+    h1 {
+        font-size: 2.5rem;
+        margin-top: 20px;
+        color: #3E2723;
+        text-align: center;
     }
 }
+#admin-wraper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+table, th, td {
+    border: 1px solid #261606;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+tbody {
+    tr { 
+        &:last-child td {
+            border-bottom: 1px solid #261606;
+        }
+    }
+
+    td {
+        font-family: var(--body-font, "Merriweather Sans"), sans-serif;
+        border-bottom: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15); 
+        background-color: rgb(203, 205, 207);
+    }
+
+    tr {
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: rgba(0, 112, 66, 0.1);
+        }
+    }
+
+}
+
+thead {
+    background-color: #006239;
+    
+    th {
+        color: #FDFBF7;
+        font-size: 1.7rem;
+        font-family: var(--title-font, Jost), sans-serif;
+    }
+}
+
+.table-container {
+    max-width: 90vw;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-align: center;
+    margin: 10px;
+    font-size: 2rem;
+    color: #0F1A15;
+}
+
+
+.table-box {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+
+    /* Columns width of Reservation */
+    &:nth-child(1) {
+        th {
+            &:nth-child(1) {width: 20%;}
+            &:nth-child(2) {width: 25%;}
+            &:nth-child(3) {width: 5%;}
+            &:nth-child(4) {width: 25%;}
+            &:nth-child(5) {width: 25%;}
+        }
+    }
+
+    /* Columns width of Game Winners */
+    &:nth-child(2) {
+        th {
+            &:nth-child(1) {width: 35%;}
+            &:nth-child(2) {width: 35%;}
+            &:nth-child(3) {width: 30%;}
+        }
+    }
+}
+
 
 @media screen and (min-width: 600px) and (max-width: 900px) {
 
@@ -759,6 +838,8 @@
         order: 2;
         padding: 50px;
     }
+
+    /* Minigame page*/
 
     .minigame-main{
         grid-template-columns:repeat(1, 1fr);
@@ -907,6 +988,98 @@
         font-size: var(--body-font-size);
     }
 }
+
+@media (max-width: 900px) {
+    .about_us_text,
+    .story_text,
+    .map_text,
+    .values {
+        padding: 48px 24px;
+    }
+
+    .story,
+    .map {
+        grid-template-columns: 1fr;
+        min-height: unset;
+    }
+
+
+    .map_img {
+        order: 0;
+    }
+
+    .story_img,
+    .map_img {
+        height: 400px;
+        padding-left: 24px;
+        padding-right: 24px;
+
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding: 48px 24px 24px;
+    }
+
+    /* Adminpage */
+    #admin-main h1{
+        font-size: var(--navigation-bar-link-font);
+    }
+
+    #admin-wraper{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+
+    .table-container {
+        max-width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .table-box h3 {
+            text-align: center;
+            margin: 10px;
+            font-size: var(--h2-font-size);
+            color: #0F1A15;
+        }
+    .table-box {
+        text-align: center;
+        width: 80dvw;
+        max-width: none;
+        margin: 0 auto 40px auto;
+        padding: 10px;
+        z-index: 10;
+        overflow-x: auto;
+
+        table{
+            width: 100dvw;
+        }
+
+        /* Columns width of Reservation */
+        &:nth-child(1) {
+            order: 2;
+        }
+
+        /* Columns width of Game Winners */
+        &:nth-child(2) {
+            order: 1;
+        }
+    }
+    thead {    
+        th {
+            font-size: 1rem;
+        }
+    }
+}
+
 @media screen and (max-width: 600px) {
 
     /* Homepage */
@@ -926,8 +1099,9 @@
         width: 100%;
 
         p{
-        width: 30ch;
-        text-align: start;
+            text-align: start;
+            width: clamp(70%, 30ch, 100%);
+            font-size: clamp(3dvw, 1rem, 4dvw);
         }
     }
 
@@ -939,7 +1113,24 @@
     .left-section {
         order: 2;
         padding: 50px;
+
+        h3{
+            font-size: 1.5rem;
+        }
     }
+
+    .sessonal-drink-text{     
+
+        h3{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: var(--body-font-size);
+            line-height: 20px;
+        }
+        }
+
+    /* Minigame page*/
 
     .minigame-main{
         display: grid;
